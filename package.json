@@ -37,13 +37,15 @@
   "author": "Jonny",
   "dependencies": {
     "axios": "^0.27.2",
+    "electron-fetch": "^1.9.1",
     "find-process": "^1.4.7",
     "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.1",
     "node-powershell": "^4.0.0",
     "regedit": "^5.1.1"
   },
   "devDependencies": {
-    "electron-builder": "^23.6.0",
-    "electron": "^20.1.1"
+    "electron": "^20.1.1",
+    "electron-builder": "^23.6.0"
   }
 }
