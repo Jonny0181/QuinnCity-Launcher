@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+  overflow: hidden;
+  background-color: #111;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 9999; /* Ensure header is always on top */
+}
+
+.buttons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#minimizeButton,
+#closeButton {
+  width: 40px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+}
+
+#minimizeButton:hover,
+#closeButton:hover {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.drag {
+  flex-grow: 1;
+  height: 100%;
+  -webkit-app-region: drag;
+}
+
+#discordButton {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  height: 37px;
+  width: 50px;
+  bottom: 20px;
+  left: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+#discordButton > img {
+  height: 30px;
+  fill: white !important;
+}
+
+#connectButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#connectButton:hover {
+  background-color: #555;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-image: url("./assets/images/QuinnCity.gif");
+  background-size: cover;
+}
+
+.content {
+  position: relative;
+  top: 38vh;
+  margin: 0 3em;
+}
+
+.title {
+  font-family: "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff; /* Title text color */
+}
+
+.placement-text {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #fff; /* Placement text color */
+  margin-top: 10px;
+}
+
+#serverStatus {
+  position: relative;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  top: 35vh;
+  left: 60px;
+}
+
+#connectedPlayers {
+  position: relative;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  top: 49vh;
+  left: 60px;
+}

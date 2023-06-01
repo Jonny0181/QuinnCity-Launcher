@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>QuinnCity Roleplay</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="drag-area"></div>
+      <div class="top-buttons">
+        <button
+          class="top-button"
+          id="minimize-button"
+          onclick="adjustWindow('minimize')"
+        >
+          <img src="./assets/icons/minimize.png" alt="Minimize" />
+        </button>
+        <button
+          class="top-button"
+          id="close-button"
+          onclick="adjustWindow('close')"
+        >
+          <img src="./assets/icons/close.png" alt="Close" />
+        </button>
+      </div>
+    </div>
+    <div class="sides-container">
+      <div class="left-side">
+        <div class="logo">
+          <img src="./assets/images/Logo.png" alt="logo">
+        </div>
+        <div class="information">
+          <p class="basic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus fugiat quaerat recusandae iure animi, ipsum illum eius esse autem quibusdam quis explicabo quas rem saepe reiciendis quia. Voluptatum, assumenda repellat.</p>
+          <p class="connectedPlayers" id="connectedPlayers">Players Connected: Loading</p>
+        </div>
+        <button id="connectButton" onclick="StartFiveM()">Connect</button>
+        <div class="social-icons">
+          <button id="discordButton" onclick="openSocialAccount('discord')">
+            <img src="./assets/images/discord.svg" alt="discordIcon" />
+          </button>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="picture-slider">
+          <img src="./assets/images/image1.jpg" alt="Image 1" />
+          <img src="./assets/images/image2.jpg" alt="Image 2" />
+          <img src="./assets/images/image3.jpg" alt="Image 3" />
+        </div>
+        <p class="update-text">Update Text 1</p>
+        <div class="slider-bars">
+          <div class="slider-bar" id="slider-bar-1" data-image="./assets/images/image1.jpg" data-text="Update Text 1"></div>
+          <div class="slider-bar" id="slider-bar-2" data-image="./assets/images/image2.jpg" data-text="Update Text 2"></div>
+          <div class="slider-bar" id="slider-bar-3" data-image="./assets/images/image3.jpg" data-text="Update Text 3"></div>
+        </div>
+      </div>
+    </div>
+
+    <audio src="./assets/sounds/connect.mp3" id="connectAudio"></audio>
+    <audio src="./assets/sounds/check.mp3" id="checkAudio"></audio>
+    <audio src="./assets/sounds/uncheck.mp3" id="uncheckAudio"></audio>
+    <audio src="./assets/sounds/closeUI.mp3" id="closeAudio"></audio>
+    <audio src="./assets/sounds/openUI.mp3" id="openAudio"></audio>
+
+    <script src="../src/render.js" defer></script>
+  </body>
+</html>

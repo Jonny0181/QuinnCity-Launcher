@@ -1,0 +1,49 @@
+{
+  "name": "quinncity-roleplay",
+  "version": "1.0.0",
+  "description": "Easy to use launcher that connect you to the city!",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "QuinnCity Roleplay",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "html/assets/images/QuinnCityIcon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "html/assets/images/QuinnCityIcon.ico",
+      "uninstallerIcon": "html/assets/images/QuinnCityIcon.ico",
+      "uninstallDisplayName": "Uninstall QuinnCity Roleplay",
+      "shortcutName": "QuinnCity Roleplay",
+      "artifactName": "QuinnCity.Roleplay.${version}.${ext}",
+      "allowToChangeInstallationDirectory": false
+    },
+    "extraResources": [
+      {
+        "from": "node_modules/regedit/vbs",
+        "to": "regedit/vbs",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "author": "Jonny",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "find-process": "^1.4.7",
+    "fs": "^0.0.1-security",
+    "node-powershell": "^4.0.0",
+    "regedit": "^5.1.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0",
+    "electron": "^20.1.1"
+  }
+}
